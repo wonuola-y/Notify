@@ -2,6 +2,7 @@ import { Home } from "./components/Home";
 import { Routes, Route } from "react-router-dom";
 import { Post } from "./components/Post";
 import Chess from "./components/Chess";
+import Strategy from "./components/Strategy";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Profile" element={<Post />} />
         <Route path="/ChessClub" element={<Chess />}/>
+        <Route path="/Strategies" element={<Strategy />}/>
       </Routes>
     </div>
   );

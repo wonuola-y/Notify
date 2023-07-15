@@ -62,7 +62,7 @@ const Chess = () => {
             </div>
           </div>
         ))}
-           <button className="my-4 bg-[#0A327B] text-white p-3 rounded text-[10px] ">
+           <button className="my-4 bg-[#0A327B] hover:bg-blue-700 text-white p-3 rounded text-[10px] ">
           <Link to="/"> Go back to Notifications page</Link>
         </button>
       </div>

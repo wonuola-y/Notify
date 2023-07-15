@@ -125,7 +125,7 @@ export const Home = () => {
                         <Link to="/ChessClub"> {w.special}</Link>
                       </span>
                       <span className=" font-bold text-[#0A327B] cursor-pointer">
-                        {w.specials}
+                        <Link to='/Strategies'>{w.specials}</Link>
                       </span>
                     </p>
                     {w.read && (
