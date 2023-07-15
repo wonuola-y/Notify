@@ -6,7 +6,7 @@ import kim from "../assets/images/avatar-kimberly-smith.webp";
 import nathan from "../assets/images/avatar-nathan-peterson.webp";
 import anna from "../assets/images/avatar-anna-kim.webp";
 import { useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [notify, setNotify] = useState([
@@ -59,7 +59,7 @@ export const Home = () => {
       name: "Nathan Peterson ",
       comment: " reacted to your recent post ",
       time: "2 weeks ago",
-      special: "5 end-game strategies to increase your win rate",
+      specials: "5 end-game strategies to increase your win rate",
       img: nathan,
       read: false,
     },
@@ -113,21 +113,22 @@ export const Home = () => {
                 <div className=" max-w-xl">
                   {/* comments */}
                   <div className="font-medium text-[#5E6778] flex items-center">
-                   <p >
-                   <span className="font-extrabold font-play hover:text-[#0A327B] cursor-pointer text-black ">
-                      {w.name}
-                    </span>
-                    {w.comment}{" "}
-                    <span className="font-bold text-[#5E6778] hover:text-[#0A327B] hover:font-extrabold cursor-pointer">
-                     <Link to='/Profile'> {w.added}</Link>
-                    </span>{" "}
-                   
-                    <span className=" font-bold text-[#0A327B] cursor-pointer">
-                      {w.special}
-                    </span>
-                   
-                   </p>
-                   {w.read && (
+                    <p>
+                      <span className="font-extrabold font-play hover:text-[#0A327B] cursor-pointer text-black ">
+                        {w.name}
+                      </span>
+                      {w.comment}{" "}
+                      <span className="font-bold text-[#5E6778] hover:text-[#0A327B] hover:font-extrabold cursor-pointer">
+                        <Link to="/Profile"> {w.added}</Link>
+                      </span>{" "}
+                      <span className=" font-bold text-[#0A327B] cursor-pointer">
+                        <Link to="/ChessClub"> {w.special}</Link>
+                      </span>
+                      <span className=" font-bold text-[#0A327B] cursor-pointer">
+                        {w.specials}
+                      </span>
+                    </p>
+                    {w.read && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="8"
