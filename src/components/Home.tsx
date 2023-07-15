@@ -102,17 +102,17 @@ export const Home = () => {
           notify.map((w) => (
             <div
               key={w.id}
-              className="flex py-5 cursor-pointer "
+              className="flex items-center py-5 cursor-pointer "
               onClick={() => handleNotify(w.id)}
             >
-              <div className="mx-5">
+              <div className="mx-5 w-2/12">
                 <img src={w.img} alt="" className=" w-11" />
               </div>
-              <div className="flex flex-col max-w-3xl">
+              <div className="flex flex-col w-7/12">
                 {/* container */}
                 <div className=" max-w-xl">
                   {/* comments */}
-                  <div className="font-medium text-[#5E6778] flex items-center">
+                  <div className="font-medium text-[#5E6778] flex items-center ">
                     <p>
                       <span className="font-extrabold font-play hover:text-[#0A327B] cursor-pointer text-black ">
                         {w.name}
@@ -128,7 +128,13 @@ export const Home = () => {
                         <Link to='/Strategies'>{w.specials}</Link>
                       </span>
                     </p>
-                    {w.read && (
+                  
+                  </div>
+                </div>
+                <div className="text-[#5E6778]">{w.time}</div>
+              </div>
+              <div className=" 3/12">
+              {w.read && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="8"
@@ -140,9 +146,6 @@ export const Home = () => {
                         <circle cx="4" cy="4" r="4" fill="#F65552" />
                       </svg>
                     )}
-                  </div>
-                </div>
-                <div className="text-[#5E6778]">{w.time}</div>
               </div>
             </div>
           ))}
