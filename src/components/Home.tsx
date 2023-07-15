@@ -6,6 +6,7 @@ import kim from "../assets/images/avatar-kimberly-smith.webp";
 import nathan from "../assets/images/avatar-nathan-peterson.webp";
 import anna from "../assets/images/avatar-anna-kim.webp";
 import { useState } from "react";
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
   const [notify, setNotify] = useState([
@@ -108,22 +109,37 @@ export const Home = () => {
                 <img src={w.img} alt="" className=" w-11" />
               </div>
               <div className="flex flex-col max-w-3xl">
+                {/* container */}
                 <div className=" max-w-xl">
-                  <p className="font-medium text-[#5E6778]">
-                    <span className="font-extrabold font-play hover:text-[#0A327B] cursor-pointer text-black ">
+                  {/* comments */}
+                  <div className="font-medium text-[#5E6778] flex items-center">
+                   <p >
+                   <span className="font-extrabold font-play hover:text-[#0A327B] cursor-pointer text-black ">
                       {w.name}
                     </span>
                     {w.comment}{" "}
                     <span className="font-bold text-[#5E6778] hover:text-[#0A327B] hover:font-extrabold cursor-pointer">
-                      {w.added}
+                     <Link to='/Profile'> {w.added}</Link>
                     </span>{" "}
-                    {w.read && (
-                      <span className="rounded bg-red-400 p-4 w-20 h-20"></span>
-                    )}
+                   
                     <span className=" font-bold text-[#0A327B] cursor-pointer">
                       {w.special}
                     </span>
-                  </p>
+                   
+                   </p>
+                   {w.read && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="8"
+                        height="8"
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        className="mx-2"
+                      >
+                        <circle cx="4" cy="4" r="4" fill="#F65552" />
+                      </svg>
+                    )}
+                  </div>
                 </div>
                 <div className="text-[#5E6778]">{w.time}</div>
               </div>
